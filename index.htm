@@ -16,9 +16,6 @@
   <div class="container">
   <!-- row for logao -->
     <div class="row title-bar">
-      <!-- <div class="col-md-6 col-xs-6">
-        <img class="img-responsive logo" src="images/logo.svg" alt="udacity logo">
-      </div> -->
       <div class="col-md-12 text-right text-uppercase" >
         <img class="logo" src="images/logo.svg" alt="udacity logo">
         <h1 class="title-name">Jane Doette</h1>
@@ -39,8 +36,6 @@
           <source media="(max-width: 600px)" srcset="images/bridge-600x200.jpg" >
           <img class="img-responsive center-block" src="images/bridge-600x200.jpg" alt="bridge photo">
         </picture>
-
-        <!-- <img class="img-responsive center-block" src="images/center.jpg"> -->
       </div>
     </div>
     <!-- row for featured work -->
@@ -56,7 +51,7 @@
         <picture>
           <source media="(min-width: 992px)" srcset="images/street-360x240.jpg" >
           <source media="(min-width: 412px)" srcset="images/street-720x480.jpg" >
-          <img class="img-responsive center-block" src="images/street-360x240.jpg" alt="street photo">
+          <img class="img-responsive center-block" src="images/street-360x240.jpg" alt="street photo" data-toggle="modal" data-target="#modal-item" data-num=1>
         </picture>
         <h3 class="text-uppercase item-title">Applify</h3>
           <p>
@@ -70,7 +65,7 @@
         <picture>
           <source media="(min-width: 992px)" srcset="images/building-360x240.jpg" >
           <source media="(min-width: 412px)" srcset="images/building-720x480.jpg" >
-          <img class="img-responsive center-block" src="images/building-360x240.jpg" alt="building">
+          <img class="img-responsive center-block" src="images/building-360x240.jpg" alt="building" data-toggle="modal" data-target="#modal-item" data-num=2>
         </picture>
         <h3 class="text-uppercase item-title">sunflower</h3>
         <p>
@@ -82,7 +77,7 @@
         <picture>
           <source media="(min-width: 992px)" srcset="images/forest-360x240.jpg" >
           <source media="(min-width: 412px)" srcset="images/forest-720x480.jpg" >
-          <img class="img-responsive center-block" src="images/forest-360x240.jpg" alt="forest">
+          <img class="img-responsive center-block" src="images/forest-360x240.jpg" alt="forest" data-toggle="modal" data-target="#modal-item" data-num=3>
         </picture>
         <h3 class="text-uppercase item-title">bokeh</h3>
         <p>
@@ -95,18 +90,17 @@
   </div>
 
   <!-- Modal -->
-    <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal-item" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+                    <h4 class="modal-title text-center" id="myModalLabel"></h4>
                 </div>
-                <div class="modal-body">
-                    <img class="img-responsive" src="http://placehold.it/555x300">
-                    This was my first project in this class. I learned a lot about HTML and CSS.
+                <div class="modal-body text-center">
+                    <img class="img-responsive modal-image center-block" src="" alt="modal image">
+                    <p></p>
                 </div>
-                <div class="modal-footer">
-           
+                <div class="modal-footer">  
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -114,5 +108,32 @@
     </div>
 
 
+  <script type="text/javascript">
+    $('#modal-item').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget); // Button that triggered the modal
+      var itemNum = button.data('num');
+      
+      var modal = $(this)
+      switch (itemNum){
+        case 1:
+          modal.find(".modal-image").attr("src","images/street-360x240.jpg");
+          modal.find(".modal-title").text("Applify");
+          modal.find("p").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
+          break;
+        case 2:
+          modal.find(".modal-image").attr("src","images/building-360x240.jpg");
+          modal.find(".modal-title").text("Sunflower");
+          modal.find("p").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
+          break;
+        case 3:
+          modal.find(".modal-image").attr("src","images/forest-360x240.jpg");
+          modal.find(".modal-title").text("Bokeh");
+          modal.find("p").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
+          break;
+      }
+    })
+  </script>    
+
   </body>
+
 </html>
