@@ -15,13 +15,13 @@
   <body>
   <div class="container">
   <!-- row for logao -->
-    <div class="row title-bar">
+    <header class="row title-bar">
       <div class="col-md-12 text-right text-uppercase" >
         <img class="logo" src="images/logo.svg" alt="udacity logo">
         <h1 class="title-name">Jane Doette</h1>
         <h3 class="title-job">Front-end Ninja</h3>
       </div>
-    </div>
+    </header>
     <!-- row for horizontal rule -->
     <div class="row">
       <div class="col-md-12 rule">
@@ -29,7 +29,7 @@
       </div>
     </div>
     <!-- row for center image -->
-    <div class="row">
+    <figure class="row">
       <div class="col-md-12">
         <picture>
           <source media="(min-width: 600px)" srcset="images/bridge-2400x800_2x.jpg 2x,images/bridge-1200x400.jpg " >
@@ -37,17 +37,17 @@
           <img class="img-responsive center-block" src="images/bridge-600x200.jpg" alt="bridge photo">
         </picture>
       </div>
-    </div>
+    </figure>
     <!-- row for featured work -->
-    <div class="row">
+    <header class="row">
       <div class="col-md-12">
         <h2 class="feature-title">Featured Work</h2>
       </div>
-    </div>
+    </header>
     <!-- row for 3 project -->
     <div class="row text-center">
     <!-- item1 -->
-      <div class="col-md-4">
+      <section class="col-md-4">
         <picture>
           <source media="(min-width: 992px)" srcset="images/street-360x240.jpg" >
           <source media="(min-width: 412px)" srcset="images/street-720x480.jpg" >
@@ -59,9 +59,9 @@
               https://github.com/udacity/Appify
             </a>
           </p>
-      </div>
+      </section>
       <!-- item2 -->
-      <div class="col-md-4">
+      <section class="col-md-4">
         <picture>
           <source media="(min-width: 992px)" srcset="images/building-360x240.jpg" >
           <source media="(min-width: 412px)" srcset="images/building-720x480.jpg" >
@@ -71,9 +71,9 @@
         <p>
           <a href="http://github.com">https://github.com/udacity/Sunflower</a>
         </p>
-      </div>
+      </section>
       <!-- item3 -->
-      <div class="col-md-4">
+      <section class="col-md-4">
         <picture>
           <source media="(min-width: 992px)" srcset="images/forest-360x240.jpg" >
           <source media="(min-width: 412px)" srcset="images/forest-720x480.jpg" >
@@ -83,25 +83,25 @@
         <p>
           <a href="http://github.com">https://github.com/udacity/Bokeh</a>
         </p>
-      </div>
+      </section>
     </div>
   </div>
   <!-- Modal -->
   <div class="modal fade" id="modal-item" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
+      <section class="modal-dialog">
+          <article class="modal-content">
+              <header class="modal-header">
                   <h4 class="modal-title text-center" id="myModalLabel"></h4>
-              </div>
-              <div class="modal-body text-center">
+              </header>
+              <figure class="modal-body text-center">
                   <img class="img-responsive modal-image center-block" src="" alt="modal image">
                   <p></p>
-              </div>
-              <div class="modal-footer">  
+              </figure>
+              <footer class="modal-footer">  
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-          </div>
-      </div>
+              </footer>
+          </article>
+      </section>
   </div>
   </body>
 </html>
