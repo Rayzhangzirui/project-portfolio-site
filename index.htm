@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
-    <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
     <title>portfolio site</title>
-
   </head>
+  
   <body>
   <div class="container">
   <!-- row for logao -->
@@ -46,7 +46,7 @@
     </div>
     <!-- row for 3 project -->
     <div class="row text-center">
-
+    <!-- item1 -->
       <div class="col-md-4">
         <picture>
           <source media="(min-width: 992px)" srcset="images/street-360x240.jpg" >
@@ -60,7 +60,7 @@
             </a>
           </p>
       </div>
-
+      <!-- item2 -->
       <div class="col-md-4">
         <picture>
           <source media="(min-width: 992px)" srcset="images/building-360x240.jpg" >
@@ -72,7 +72,7 @@
           <a href="http://github.com">https://github.com/udacity/Sunflower</a>
         </p>
       </div>
-
+      <!-- item3 -->
       <div class="col-md-4">
         <picture>
           <source media="(min-width: 992px)" srcset="images/forest-360x240.jpg" >
@@ -84,56 +84,24 @@
           <a href="http://github.com">https://github.com/udacity/Bokeh</a>
         </p>
       </div>
-
     </div>
-    
   </div>
-
   <!-- Modal -->
-    <div class="modal fade" id="modal-item" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title text-center" id="myModalLabel"></h4>
-                </div>
-                <div class="modal-body text-center">
-                    <img class="img-responsive modal-image center-block" src="" alt="modal image">
-                    <p></p>
-                </div>
-                <div class="modal-footer">  
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-  <script type="text/javascript">
-    $('#modal-item').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget); // Button that triggered the modal
-      var itemNum = button.data('num');
-      
-      var modal = $(this)
-      switch (itemNum){
-        case 1:
-          modal.find(".modal-image").attr("src","images/street-360x240.jpg");
-          modal.find(".modal-title").text("Applify");
-          modal.find("p").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
-          break;
-        case 2:
-          modal.find(".modal-image").attr("src","images/building-360x240.jpg");
-          modal.find(".modal-title").text("Sunflower");
-          modal.find("p").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
-          break;
-        case 3:
-          modal.find(".modal-image").attr("src","images/forest-360x240.jpg");
-          modal.find(".modal-title").text("Bokeh");
-          modal.find("p").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
-          break;
-      }
-    })
-  </script>    
-
+  <div class="modal fade" id="modal-item" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title text-center" id="myModalLabel"></h4>
+              </div>
+              <div class="modal-body text-center">
+                  <img class="img-responsive modal-image center-block" src="" alt="modal image">
+                  <p></p>
+              </div>
+              <div class="modal-footer">  
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
   </body>
-
 </html>

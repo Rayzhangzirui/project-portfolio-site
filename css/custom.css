@@ -1,10 +1,10 @@
-
 .text-center {
 	text-align: center;
 }
 
-body, a{
-	font-family: 'Lato', sans-serif;
+body,
+a {
+	font-family: "Lato", sans-serif;
 	color: #2d3c49;
 }
 
@@ -23,12 +23,12 @@ body, a{
 	font-size: 20px;
 }
 
-.feature-title{
+.feature-title {
 	color: #7d97ad;
 	font-weight: 600;
 }
 
-.item-title{
+.item-title {
 	font-weight: 600;
 }
 
@@ -40,29 +40,24 @@ hr {
 }
 
 @media (max-width: 992px) {
-	.feature-title{
+	.feature-title {
         text-align: center;
     }
 }
 
 /*for phone*/
 @media (max-width: 412px) {
-	.feature-title{
+	.feature-title {
         text-align: center;
     }
-
 	.logo {
 		width: 80px;
 		height: 80px;
 	}
-
 	.title-name {
 		font-size: 30px;
 	}
-
 	.title-job {
 		font-size: 20px;
 	}
-
-
 }
